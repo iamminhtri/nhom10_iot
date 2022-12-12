@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <script src=".main.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <script src="../asset/js/audio.js"></script>
+    <link rel="stylesheet" href="./toastr.css">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../css/toggle.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <title> TRANG CHỦ </title>
+
+    <script>
+        $(document).ready(function() {
+            $('#navbarDropdown').mouseenter(function() {
+                $('.dropdown-menu').slideToggle(300, "linear");
+            });
+
+            $('.dropdown-menu').mouseleave(function() {
+                $(this).slideToggle(300, "linear");
+            });
+        });
+    </script>
+</head>
+
+<body class="body">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brand">
+        <a href="https://www.ctu.edu.vn/"><img src="../asset/images/DHCT.png" height="40px" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        <audio id="audio" src="../asset/audio/LastChristmas.mp3"></audio>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../home/index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../members/index.html">Thành viên</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../order/index.html">Đặt hàng</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../export/index.html">Xuất kho</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../process/index.html">Tiến trình</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../statistical/index.html">Thống Kê</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contact/index.html">Liên hệ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../cart/index.html">
+                        <iconify-icon icon="ic:twotone-shopping-cart-checkout" style="color: red;" width="30" height="25"></iconify-icon>
+                    </a>
+                </li>
+                <li class="nav-item"></li>
+                <label class="switch">
+                    <input type="checkbox" onclick="play()">
+                    <span class="slider round"></span>
+                </label>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="column">
+            <div class="container">
+
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <span class="stars"></span>
+                            <h2 class="idea"><b><i class="fa-thin fa-lightbulb"></i>Ý TƯỞNG</b></h2>
+                            <p class="idea">
+                                - Kiểm tra số lượng hàng trong kho so với số lượng mà khách đặt hàng. Nếu:
+                                <br> + Đủ số lượng với yêu cầu của khách thì sẽ được "Xuất kho thành công"
+                                <br> + Ngược lại hệ thống sẽ báo "Số lượng không đủ"
+                            </p>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <h2><b>Ý TƯỞNG</b></h2>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <span class="stars"></span>
+                            <i class="fa-sharp fa-solid fa-lightbulb"></i><h2 class="slove"><b>CÁCH THỰC HIỆN</b></h2>
+                            <p class="slove">
+
+                                - Gồm 3 bước<br> + Nhận đơn hoặc cho khách tự đặt hàng tại WEB <br> + Bắt đầu kiểm tra lượng hàng trong kho <br> + Thông báo kết quả
+                            </p>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <h2><b>CÁCH THỰC HIỆN</b></h2>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <span class="stars"></span>
+                            <h2 class="result"><b>KẾT QUẢ</b></h2>
+                            <p class="result">
+
+                                - Thông báo <br> + Xuất kho thành công. <br> + Số lượng không đủ.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <h2><b>KẾT QUẢ</b></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <img src="../asset//images/gif.gif" alt="" class="image-gif">
+        </div>
+</body>
+ <script type="text/javascript" src="https://itexpress.vn/API/files/it.snow.js"></script>
+</html>

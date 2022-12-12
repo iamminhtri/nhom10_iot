@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <title> XUẤT KHO </title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/member_css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <script src="getInfo.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/member_css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='./styles.css'>
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./toastr.js"></script>
+    <script src="../asset/js/audio.js"></script>
+    <link rel="stylesheet" href="./toastr.css">
+    <link rel="stylesheet" href="../css/toggle.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#navbarDropdown').mouseenter(function() {
+                $('.dropdown-menu').slideToggle(300, "linear");
+            });
+
+            $('.dropdown-menu').mouseleave(function() {
+                $(this).slideToggle(300, "linear");
+            });
+            N = 999;
+            $('.check').html("Còn " + N);
+        });
+
+        data = [{
+            id: "DH1",
+            madh: "IOT101",
+            datetime: "07-12-2022"
+        }, {
+            id: "DH2",
+            madh: "IOT102",
+            datetime: "09-12-2022"
+        }, {
+            id: "DH3",
+            madh: "IOT103",
+            datetime: "09-12-2021"
+        }, {
+            id: "DH5",
+            madh: "IOT105",
+            datetime: "10-12-2021"
+        }, {
+            id: "DH3",
+            madh: "IOT103",
+            datetime: "12-12-2021"
+        }]
+    </script>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brand">
+        <a href="https://www.ctu.edu.vn/"><img src="../asset/images/DHCT.png" height="40px" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        <audio id="audio" src="../asset/audio/LastChristmas.mp3"></audio>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../home/index.html">Trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../members/index.html">Thành viên</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../order/index.html">Đặt hàng</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../export/index.html">Xuất kho</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../process/index.html">Tiến trình</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../statistical/index.html">Thống Kê</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contact/index.html">Liên hệ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../cart/index.html">
+                        <iconify-icon icon="ic:twotone-shopping-cart-checkout" style="color: red;" width="30" height="25"></iconify-icon>
+                    </a>
+                </li>
+                <li class="nav-item"></li>
+                <label class="switch">
+                        <input type="checkbox" onclick="play()">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    </div>
+    <!-- <div class="product">
+        <img src="../asset/images/0.png" alt="" srcset="">
+        <div class="check">Số lượng 123</div>
+        <div class="growing-add">
+            <div class="input">
+                <input type="text" name="add" id="text" placeholder="Nhập số lượng" />
+            </div>
+            Space hack -->
+    <!-- <div class="submit">
+                <button type="submit" name="go_add" id="add" onclick="check()">
+                <span class="fa fa-plus"></span>
+              </button>
+            </div>
+        </div> -->
+    <div class="message"></div>
+    </div>
+    <!-- Begin -->
+    <div class="container mt-3">
+        <h2 class="text-center"><b>DANH SÁCH ĐƠN HÀNG</b></h2>
+
+        <table class="table search-table-outter">
+            <thead>
+                <tr>
+                    <th class="text-center" scope="col">#ID</th>
+                    <th class="text-center" scope="col">Mã đơn hàng</th>
+                    <th class="text-center" scope="col">Ngày tạo</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+                <tr class='align-middle'>
+                    <th class='align-middle text-center' scope='row'>1</th>
+                    <td class='align-middle text-center'>2</td>
+                    <td class='align-middle text-center'>3</td>
+                    <td class='d-flex justify-content-center'>
+                        <span class='btn btn-icon btn-success delete-btn btn-sm' data-toggle='tooltip' data-placement='top' data-index='1' title='Xóa'>
+                            Kiểm tra
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- End -->
+    <script>
+        $data = "";
+        let index = 0;
+        for (let x in data)
+            $data = $data +
+            "<tr class='align-middle'>" +
+            "<th class='align-middle text-center' scope='row'>" + data[x].id + "</th>" +
+            "<td class='align-middle text-center'>" + data[x].madh + "</td>" +
+            "<td class='align-middle text-center'>" + data[x].datetime + "</td>" +
+            "<td class='d-flex justify-content-center'>" +
+            "<span class='btn btn-icon btn-success delete-btn btn-sm' data-toggle='tooltip' data-placement='top' data-index='" + index++ + "' title='Xóa'>" +
+            "Kiểm tra" +
+            "</span>" +
+            "</td>" +
+            "</tr>"
+        document.getElementById('data').innerHTML = $data;
+        //handle on click delete-btn
+        $(document).on("click", ".delete-btn", function() {
+            var index = $(this).attr("data-index");
+            console.log(data[index]);
+            swal.fire({
+                title: "Thông tin đơn hàng\n " +
+                    "ID: " + data[index].id + "\n" +
+                    "Mã đơn hàng: " + data[index].madh,
+                text: "Đơn hàng tạo lúc " + data[index].datetime,
+                icon: "success",
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Đóng",
+            })
+        });
+    </script>
+
+    <script>
+        function check() {
+            let st = document.getElementById("text").value;
+            if (Math.ceil(st) > N) {
+                $('.message').html("<div class='alert-box warning'><span>warning: </span>Số lượng không đủ</div>");
+
+            } else {
+                N -= Math.ceil(st);
+                $('.check').html("Còn " + N);
+                $('.message').html("<div class='alert-box success'><span>success: </span>Xuất hàng thành công</div>");
+            }
+        }
+    </script>
+</body>
+<script type="text/javascript" src="https://itexpress.vn/API/files/it.snow.js"></script>
+</html>

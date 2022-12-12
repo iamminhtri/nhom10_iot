@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <script src="../js/main.js"></script>
+    <title> THÀNH VIÊN </title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/member_css.css">
+    <link rel="stylesheet" href="../member/thanhviencss.css"
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='./styles.css'>
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./toastr.js"></script>
+    <script src="../asset/js/audio.js"></script>
+    <link rel="stylesheet" href="./toastr.css">
+    <link rel="stylesheet" href="./member.css">
+    <link rel="stylesheet" href="../css/toggle.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            $('#navbarDropdown').mouseenter(function() {
+                $('.dropdown-menu').slideToggle(300, "linear");
+            });
+
+            $('.dropdown-menu').mouseleave(function() {
+                $(this).slideToggle(300, "linear");
+            });
+            N = 999;
+            $('.check').html("Còn " + N);
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brand">
+        <a href="https://www.ctu.edu.vn/"><img src="../asset/images/DHCT.png" height="40px" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        <audio id="audio" src="../asset/audio/LastChristmas.mp3"></audio>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../home/index.html">Trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../members/index.html">Thành viên</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../order/index.html">Đặt hàng</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../export/index.html">Xuất kho</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../process/index.html">Tiến trình</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../statistical/index.html">Thống Kê</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contact/index.html">Liên hệ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../cart/index.html">
+                        <iconify-icon icon="ic:twotone-shopping-cart-checkout" style="color: red;" width="30" height="25"></iconify-icon>
+                    </a>
+                </li>
+                <li class="nav-item"></li>
+                <label class="switch">
+                        <input type="checkbox" onclick="play()">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" onmouseleave="GVHD()">
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <ul class="list-group">
+                    <li class="list-group-item" id="member1" onmouseenter="member(1)">
+                        <a href="https://www.facebook.com/iamminhtri.org"><img src="../asset/images/minhtri.jpg" class="img-sm"><b> Minh Trí </b>
+                    </li>
+                    <li class="list-group-item" id="member2" onmouseenter="member(2)">
+                        <a href="https://www.facebook.com/mynameisthanhdieu"><img src="../asset/images/thanhdieu.jpg" class="img-sm"><b> Thanh Diệu </b>
+                    </li>
+                    <li class="list-group-item" id="member3" onmouseenter="member(3)">
+                        <a href="https://www.facebook.com/profile.php?id=100058528640749"><img src="../asset/images/tuananh.jpg" class="img-sm"><b> Tuấn Anh </b>
+                    </li>
+                    <li class="list-group-item" id="member4" onmouseenter="member(4)">
+                        <a href="https://www.facebook.com/trule.hoanghuy"><img src="../asset/images/hoanghuy.jpg" class="img-sm"><b> Hoàng Huy </b>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div> -->
+            <div class="col-12 col-md-9" id="table">
+                <div id="ct">
+                    <div>
+                        <div class="card">
+                            <img src="../asset//images/nvkhanh.jpg" alt="John" style="width:100%">
+                            <h2>NGUYỄN VĂN KHANH</h2>
+                            <p class="title">Học hàm, học vị: Tiến sĩ</p>
+                            <p> <b> TRƯỜNG BÁCH KHOA </b></p>
+                            <a href="https://www.facebook.com/vankhanh.mkd"><button>Contact</button></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- </div> -->
+
+    </div>
+
+    </div>
+    <script>
+        let m = [{
+            name: "Nguyễn Minh Trí",
+            contents: [
+                "Thự hiện trang Đặt hàng",
+                "Thực hiện trang Tiến Trình ",
+                "Thự hiện trang Thống kê"
+            ],
+            contribute: "100%",
+            urlImage: "../asset/images/minhtri.jpg",
+            masv: "B1913094",
+            class: "Kỹ thuật điều khiển và Tự động hoá A3 K45",
+            email: "trib1913094@student.ctu.edu.vn",
+        }, {
+            name: "Lâm Thị Thanh Diệu",
+            contents: [
+                "Thực hiện Trang chủ",
+                "Thực hiện trang Xuất kho"
+            ],
+            contribute: "100%",
+            urlImage: "../asset/images/thanhdieu.jpg",
+            masv: "B1905741",
+            class: "Quản Lí Công Nghiệp A1 K45",
+            email: "dieub1905741@student.ctu.edu.vn",
+        }, {
+            name: "Nguyễn Tuấn Anh",
+            contents: [
+                "Thực hiện trang Giỏ hàng",
+                "Thực hiện trang Liên hệ"
+            ],
+            contribute: "100%",
+            urlImage: "../asset/images/tuananh.jpg",
+            masv: "B1905730",
+            class: "Quản Lí Công Nghiệp A1 K45",
+            email: "anhb1905730@student.ctu.edu.vn",
+        }, {
+            name: "Trừ Lê Hoàng Huy",
+            contents: [
+                "Thực hiện trang nền",
+                "Thực hiện trang thành viên"
+            ],
+            contribute: "100%",
+            urlImage: "../asset/images/hoanghuy.jpg",
+            masv: "B1905763",
+            class: "Quản Lí Công Nghiệp A1 K45",
+            email: "huyb1905763@student.ctu.edu.vn",
+        }, ]
+
+        function member(index) {
+
+            for (let i = 0; i < 10; i++)
+                $("#member" + i).removeClass("active")
+            $("#member" + index).addClass("active")
+            index = index - 1;
+            // document.getElementById("name").innerHTML = m[index].name;
+            let content = "";
+            m[index].contents.forEach(element => {
+                content = content + "<h6>" + element + "</h6>";
+            });
+            document.getElementById("ct").innerHTML = '<div class="avata"><img src="' + m[index].urlImage + '" class="img-avata"></div>' +
+                '<table class="table">' +
+                '<thead>' +
+                '<tr>' +
+                '<th scope="col">Tên thành viên</th>' +
+                '<th scope="col">Nội dung thực hiện</th>' +
+                '<th scope="col">Đóng góp</th>' +
+                '</tr>' +
+                '</thead>' +
+                '<tbody id="data">' +
+                '<tr>' +
+                '<th scope="row" id="name">' + m[index].name + '</th>' +
+                '<td id="content">' + content + '</td>' +
+                '<td><span class="badge badge-danger" id="contributor">' + m[index].contribute + '</span></td>' +
+                '</tr>' +
+                '</tr>' +
+                '</thead>' +
+                '<tbody id="data">' +
+                '<tr>' +
+                '<th scope="row" id="name"> <i class="fas fa-id-card"></i> &nbsp Mã sinh viên</th>' +
+                '<td colspan="2">' + m[index].masv + '</td>' +
+                '</tr>' +
+                '<tr>' +
+                '<th scope="row" id="name"> <i class="fas fa-school"></i> &nbsp Lớp</th>' +
+                '<td colspan="2">' + m[index].class + '</td>' +
+                '</tr>' +
+                '<tr>' +
+                '<th scope="row" id="name"> <i class="fas fa-envelope-square"></i> &nbsp Email</th>' +
+                '<td colspan="2">' + m[index].email + '</td>' +
+                '</tr>' +
+                '</tbody>' +
+                '</table>';
+
+            // document.getElementById("content").innerHTML = content;
+            // document.getElementById("contributor").innerHTML = m[index].contribute;
+        }
+
+        function GVHD() {
+            document.getElementById("ct").innerHTML = '<div>' +
+                '<div class="card">' +
+                '<img src="../asset//images/nvkhanh.jpg" alt="John" style="width:100%">' +
+                '<p class="title"> Giáo viên hướng dẫn </p>'+
+                '<h2> <b> NGUYỄN VĂN KHANH </b> </h2>'+
+                '<p><b>Học hàm, học vị: Tiến sĩ<b></p>' +
+                '<p><button>Trường Bách Khoa</button></p>' +
+                '</div>' +
+                '</div>'
+        }
+    </script>
+</body>
+<script type="text/javascript" src="https://itexpress.vn/API/files/it.snow.js"></script>
+</html>

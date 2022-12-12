@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <script src="../js/main.js"></script>
+    <title> GIỎ HÀNG </title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/member_css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='./styles.css'>
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./toastr.js"></script>
+    <script src="../asset/js/audio.js"></script>
+    <link rel="stylesheet" href="./toastr.css">
+    <link rel="stylesheet" href="../css/toggle.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#navbarDropdown').mouseenter(function() {
+                $('.dropdown-menu').slideToggle(300, "linear");
+            });
+
+            $('.dropdown-menu').mouseleave(function() {
+                $(this).slideToggle(300, "linear");
+            });
+            N = 999;
+            $('.check').html("Còn " + N);
+        });
+    </script>
+    <style>
+        body {
+            background-color: #fdc7ab;
+            }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brand">
+        <a href="https://www.ctu.edu.vn/"><img src="../asset/images/DHCT.png" height="40px" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        <audio id="audio" src="../asset/audio/LastChristmas.mp3"></audio>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../home/index.html"><b>Trang chủ</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../members/index.html">Thành viên</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../order/index.html">Đặt hàng</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../export/index.html">Xuất kho</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../process/index.html">Tiến trình</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../statistical/index.html">Thống Kê</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contact/index.html">Liên hệ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../cart/index.html">
+                        <iconify-icon icon="ic:twotone-shopping-cart-checkout" style="color: red;" width="30" height="25"></iconify-icon>
+                    </a>
+                </li>
+                <li class="nav-item"></li>
+                <label class="switch">
+                    <input type="checkbox" onclick="play()">
+                    <span class="slider round"></span>
+                </label>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Sản phẩm</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Đơn giá</th>
+                    <th scope="col">Thành tiền</th>
+                    <th scope="col">Xoá</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                        <h6>Găng tay</h6>
+                    </td>
+                    <td><span class="badge badge-danger badge-sm">x1</span></td>
+                    <td>120.000 VND</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    </div>
+    <script>
+        $(document).ready(function() {
+            let html = "";
+            for (let i = 0; i < 100; i++) {
+                if (getCookie('order' + i) != "") {
+                    html = html + "<tr>";
+                    html = html + '<th scope="row">' + i + '</th>';
+                    html = html + '<td><h6>' + getCookie('name' + i) + '</h6></td>';
+                    html = html + ' <td><span class="badge badge-danger badge-sm">x' + getCookie('order' + i) + '</span></td>';
+                    html = html + '<td>' + getCookie('price' + i) + '</td>';
+                    html = html + '<td>' + getCookie('total' + i) + '</td>';
+                    html = html + '<td><a href="" class="btn btn-sm btn-danger" onclick="del(' + i + ')">Xoá</a></td>';
+                }
+            }
+
+            document.getElementById("data").innerHTML = html;
+
+        })
+
+        function setCookie(cname, cvalue) {
+            const exdays = 1;
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function del(index) {
+            setCookie('order' + index, "")
+            setCookie('name' + index, "")
+            setCookie('price' + index, "")
+            setCookie('total' + index, "")
+        }
+    </script>
+</body>
+
+</html>
